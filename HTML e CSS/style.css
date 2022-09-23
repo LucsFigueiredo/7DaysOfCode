@@ -14,7 +14,7 @@ a {
     text-decoration: none;
 }
 
-.navBar {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,4 +131,39 @@ a {
     color: var(--text-color);
     font-weight: 400;
     font-size: 20px;
+}
+
+.divMetricas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 120px 0 0 0;
+}
+
+.metricas-container {
+    font-family: "inter";
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.metricasTitulo {
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 60px;
+    padding: 10px 0;
+}
+
+.metricasSub {
+    color: #101828;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.metricasP {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px 0;
 }
