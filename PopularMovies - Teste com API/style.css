@@ -1,126 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600&display=swap');
-
-body {
+:root {
+    --background-color: #17162E;
+}
+  
+* {
     margin: 0;
     padding: 0;
-    background: #17162E;
+    box-sizing: border-box;
     font-family: 'Kumbh Sans', sans-serif;
 }
-
-.titulo {
-    color: #FFFFFF;
-    font-weight: 600;
-    font-size: 36px;
-    text-align: center;
-    margin: 30px 0px;
-}
-
-.divPesquisar {
+  
+body {
+    max-width: 1260px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
+    background: var(--background-color);
+    margin: 0 auto;
 }
-
-.barraPesquisar {
+  
+main {
     width: 100%;
-    max-width: 700px;
-    background:	#333456;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    padding: 25px 0px;
 }
-
-.barraPesquisar input {
-    background: transparent;
-    flex: 1;
-    border: 0;
-    outline: none;
-    padding: 0 25px;
-    font-weight: 500;
-    font-size: 18px;
-    color: #8A8A8A;
-}
-
-.barraPesquisar button img {
-    width: 25px;
-}
-
-.barraPesquisar button {
-    border: 0;
-    cursor: pointer;
-    background: transparent;
-    padding: 0 20px;
-}
-
-.filmesFavoritos {
-    font-weight: 600;
-    font-size: 18px;
-    color: #FFFFFF;
-}
-
-.btnRadio {
+  
+h2 {
+    color: #FFF;
     text-align: center;
-    align-items: center;
-    margin: 20px;
+    margin: 2rem 0;
 }
 
-.btnRadio label {
-    font-weight: 600;
-    font-size: 18px;
-    color: #FFFFFF;
+.input-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    display: flex;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
 }
-
-.filme {
-    background: #1D1C3B;
-    border-radius: 4px;
-    filter: drop-shadow(32.8387px 24.5482px 79px rgba(0, 0, 0, 0.15)) drop-shadow(23.8851px 17.855px 53.2479px rgba(0, 0, 0, 0.121406)) drop-shadow(16.6246px 12.4276px 34.4391px rgba(0, 0, 0, 0.10125)) drop-shadow(10.9035px 8.15079px 21.3701px rgba(0, 0, 0, 0.0867188)) drop-shadow(6.56775px 4.90965px 12.8375px rgba(0, 0, 0, 0.075)) drop-shadow(3.46346px 2.58907px 7.6377px rgba(0, 0, 0, 0.0632813)) drop-shadow(1.4367px 1.07399px 4.56719px rgba(0, 0, 0, 0.04875)) drop-shadow(0.333519px 0.249318px 2.42246px rgba(0, 0, 0, 0.0285938));
-    margin: 50px 150px;
-    padding: 20px;
+  
+.input-container input {
+    padding: 0.5rem;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #FFF;
+}
+  
+.input-container img {
+    cursor: pointer;
+    height: 30px;
+}
+  
+.showOnlyFavorites {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #FFF;
+}
+  
+.movie {
+    color: #FFF;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
+    background: #1D1C3B;
+    border-radius: 0.5rem; 
+    padding: 1rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    max-width: 1024px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
 }
-
-.filmeImage {
-    margin: 0 45px;
-    display: flex;
-    align-items: center;
-  }
-
-.filme img {
-    filter: drop-shadow(20px 20px 30px rgba(0, 0, 0, 0.3));
-    width: 100px;
-    height: 100px;
+  
+.movie .movie-image {
+    width: 92px;
+    height: 92px;
+    margin-right: 1rem;
+}
+  
+.movie .movie-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
-
-.filmeInfo {
-    margin: 0 150px 0 0;
-}
-
-.filmeTitulo{
-    font-weight: 500;
-    font-size: 18px;
-    color: #FFFFFF;
-    display: block;
-}
-
-.filmeDados {
-    font-weight: 400;
-    font-size: 18px;
-    color: #FFFFFF;
-    width: 200px;
+  
+ .movie-informations {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }
-
-.descricao {
-    margin: 40px;
-    font-weight: 500;
-    font-size: 18px;
+  
+.movie-informations .movie-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+  
+.movie-informations .movie-text .rating-favorites {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+  
+.movie-informations .rating, .movie-informations .favorite {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+  
+.movie-informations .rating img {
+    width: 16px;
+}
+  
+.movie-informations .favorite img {
+    cursor: pointer;
+    transition: all .3s;
+    width: 1.2rem;
+}
+  
+.movie-informations .favorite img:hover {
+    transform: scale(1.1);
+}
+  
+.movie-description {
+    max-width: 50%;
     color: #ACACAC;
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: 1.5rem;
 }
